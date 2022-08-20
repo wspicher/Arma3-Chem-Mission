@@ -1,0 +1,26 @@
+// This file contains all custom class definitions.
+// Written by Andrew Spicher 08/11/2022.
+
+class CfgSounds
+{
+	sounds[] = {};
+
+	class darkAmbient1
+	{
+		// How the sound is referred to in the editor (e.g. trigger effects).
+		name = "darkAmbient1";
+
+		// Filename, volume, pitch, distance (optional).
+		sound[] = { "sounds\darkAmbient1.ogg", 1, 1, 100 };
+
+		// Subtitle delay in seconds, subtitle text.
+		titles[] = {};
+	};
+
+	class nightAmbient1
+	{
+		name = "nightAmbient1";
+		sound[] = { "sounds\nightAmbient1.ogg", 1, 1, 100 };
+		titles[] = {};
+	};
+};
