@@ -9,8 +9,6 @@
 #define kitbagCapacity 35
 #define carryallBagCapacity 50
 
-
-
 // Get player tool level.
 _playerFarmingToolLevel = p1 getVariable "playerFarmingToolLevel";
 

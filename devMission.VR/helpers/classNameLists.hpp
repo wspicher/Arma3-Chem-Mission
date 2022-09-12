@@ -9,3 +9,8 @@ missionBackpacks = [
 	"B_Carryall_green_F",
 	"B_Carryall_khk"
 ];
+
+generalItems = [
+	"Item_FirstAidKit",
+	"Item_ToolKit"
+];

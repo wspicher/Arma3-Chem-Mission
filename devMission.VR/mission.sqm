@@ -8,14 +8,14 @@ class EditorData
 	toggles=9;
 	class ItemIDProvider
 	{
-		nextID=216;
+		nextID=225;
 	};
 	class Camera
 	{
-		pos[]={840.28876,8.260129,3120.3979};
-		dir[]={0.62957144,-0.47558975,0.61445695};
-		up[]={0.34037146,0.87966001,0.33220246};
-		aside[]={0.69850272,-6.1158789e-007,-0.71567869};
+		pos[]={844.98364,9.3381624,3123.8369};
+		dir[]={0.025627958,-0.63425899,0.77269578};
+		up[]={0.021024872,0.77312058,0.63391042};
+		aside[]={0.99945039,0,-0.033148717};
 	};
 };
 binarizationWanted=0;
@@ -39,14 +39,13 @@ addons[]=
 	"A3_Props_F_Orange_Humanitarian_Supplies",
 	"A3_Structures_F_EPA_Items_Food",
 	"A3_Characters_F_AoW",
-	"A3_Structures_F_EPB_Furniture",
 	"A3_Structures_F_Items_Vessels"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=12;
+		items=11;
 		class Item0
 		{
 			className="A3_Structures_F_Bootcamp";
@@ -124,13 +123,6 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item11
-		{
-			className="A3_Structures_F_EPB";
-			name="Arma 3 Adapt Episode - Buildings and Structures";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
 	};
 };
 dlcs[]=
@@ -166,7 +158,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=37;
+		items=36;
 		class Item0
 		{
 			dataType="Object";
@@ -333,8 +325,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={844.52502,5.0014391,3120.8989};
-						angles[]={0,0.05822245,0};
+						position[]={845.03027,5.0014391,3126.7422};
+						angles[]={0,6.2736163,-0};
 					};
 					side="Civilian";
 					flags=7;
@@ -367,13 +359,7 @@ class Mission
 							{
 								class data
 								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
+									singleType="STRING";
 									value="Male03GRE";
 								};
 							};
@@ -386,13 +372,7 @@ class Mission
 							{
 								class data
 								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
+									singleType="SCALAR";
 									value=1.03;
 								};
 							};
@@ -411,16 +391,17 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={846.1853,6.2840414,3125.5989};
-				angles[]={0,1.5521783,0};
+				position[]={846.185,6.2838364,3125.5991};
+				angles[]={0,1.5521736,0};
 			};
 			side="Empty";
 			class Attributes
 			{
+				init="this addAction[""Purchase First Aid Kit"", ""scripts\generalStore.sqf"", ""firstAidKit"", 1.5, true, true];";
 			};
 			id=138;
 			type="Land_FirstAidKit_01_closed_F";
-			atlOffset=1.1052051;
+			atlOffset=1.105;
 		};
 		class Item12
 		{
@@ -646,13 +627,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={845.24872,5.0014391,3129.4883};
-						angles[]={0,3.1624777,0};
+						position[]={845.24902,5.0014391,3129.488};
+						angles[]={0,3.1624844,0};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="this addAction[""Purchase Messenger Bag (Grey)"", ""scripts\generalStore.sqf"", ""messengerBagGrey"", 1.5, true, true]; " \n "this addAction[""Purchase Messenger Bag (Coyote)"", ""scripts\generalStore.sqf"", ""messengerBagTan"", 1.5, true, true]; " \n "this addAction[""Purchase Everyday Backpack (Black)"", ""scripts\generalStore.sqf"", ""everydayBagBlack"", 1.5, true, true]; " \n "this addAction[""Purchase Kitbag (Olive Green)"", ""scripts\generalStore.sqf"", ""kitbagGreen"", 1.5, true, true]; " \n "this addAction[""Purchase Kitbag (Coyote)"", ""scripts\generalStore.sqf"", ""kitbagCoyote"", 1.5, true, true]; " \n "this addAction[""Purchase Carryall Bag (Olive Green)"", ""scripts\generalStore.sqf"", ""carryallBagGreen"", 1.5, true, true]; " \n "this addAction[""Purchase Carryall Bag (Khaki)"", ""scripts\generalStore.sqf"", ""carryallBagKhaki"", 1.5, true, true];";
 						class Inventory
 						{
 							class uniform
@@ -668,6 +650,36 @@ class Mission
 					};
 					id=175;
 					type="C_Man_casual_9_F_tanoan";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male02FRE";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=2;
+					};
 				};
 			};
 			class Attributes
@@ -680,23 +692,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={843.58502,5.5017896,3126.481};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				createAsSimpleObject=1;
-			};
-			id=202;
-			type="Land_ShelvesWooden_F";
-		};
-		class Item27
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={841.85455,5,3125.6829};
+				position[]={842.27014,5,3132.5217};
 			};
 			side="Empty";
 			flags=4;
@@ -706,12 +702,12 @@ class Mission
 			id=203;
 			type="B_Kitbag_rgr";
 		};
-		class Item28
+		class Item27
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={842.37891,5,3125.6936};
+				position[]={842.79449,5,3132.5325};
 			};
 			side="Empty";
 			flags=4;
@@ -721,12 +717,12 @@ class Mission
 			id=204;
 			type="B_Kitbag_cbr";
 		};
-		class Item29
+		class Item28
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={841.79462,5,3126.9719};
+				position[]={842.21021,5,3133.8108};
 			};
 			side="Empty";
 			flags=4;
@@ -736,12 +732,12 @@ class Mission
 			id=205;
 			type="B_Messenger_Gray_F";
 		};
-		class Item30
+		class Item29
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={842.46936,5,3126.9192};
+				position[]={842.88495,5,3133.7581};
 			};
 			side="Empty";
 			flags=4;
@@ -751,12 +747,12 @@ class Mission
 			id=206;
 			type="B_Messenger_Coyote_F";
 		};
-		class Item31
+		class Item30
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={842.10632,5,3126.4915};
+				position[]={842.52191,5,3133.3303};
 			};
 			side="Empty";
 			flags=4;
@@ -766,12 +762,12 @@ class Mission
 			id=207;
 			type="B_CivilianBackpack_01_Everyday_Black_F";
 		};
-		class Item32
+		class Item31
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={841.85284,5,3124.9941};
+				position[]={842.26843,5,3131.833};
 			};
 			side="Empty";
 			flags=4;
@@ -781,12 +777,12 @@ class Mission
 			id=208;
 			type="B_Carryall_green_F";
 		};
-		class Item33
+		class Item32
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={842.39923,5,3125.0242};
+				position[]={842.81482,5,3131.863};
 			};
 			side="Empty";
 			flags=4;
@@ -796,7 +792,7 @@ class Mission
 			id=209;
 			type="B_Carryall_khk";
 		};
-		class Item34
+		class Item33
 		{
 			dataType="Object";
 			class PositionInfo
@@ -813,22 +809,23 @@ class Mission
 			id=143;
 			type="Land_Metal_wooden_rack_F";
 		};
-		class Item35
+		class Item34
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={846.22925,6.2260184,3125.168};
+				position[]={846.229,6.2260184,3125.168};
 			};
 			side="Empty";
 			class Attributes
 			{
+				init="this addAction[""Purchase Toolkit"", ""scripts\generalStore.sqf"", ""toolKit"", 1.5, true, true];";
 			};
 			id=213;
 			type="Land_DrillAku_F";
 			atlOffset=1.0840001;
 		};
-		class Item36
+		class Item35
 		{
 			dataType="Object";
 			class PositionInfo

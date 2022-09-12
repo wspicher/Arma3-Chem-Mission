@@ -4,7 +4,7 @@
 test = compile preprocessFile "scripts\cocoaFarming.sqf";
 
 // Player variables.
-p1 setVariable["playerMoney", 200];
+p1 setVariable["playerMoney", 1000];
 p1 setVariable["playerHarvestedCrops", 0];
 p1 setVariable["playerFarmingToolLevel", 0];
 p1 setVariable["playerNumGasCans", 0];
